@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Footer from './components/footer/Footer';
 import MovieCard from './components/movieCard/MovieCard';
-// import logo from "https://placehold.co/200x200"
+import Logo from "./assets/devflix.png";
+import Lupa from "./assets/search.svg";
 
 const App = () => {
 
@@ -35,7 +36,7 @@ const hadleKeyPress = (e) => {
   return (
     <div id="app">
 
-      <img className='logo' src={"https://placehold.co/200x200"} alt="" />
+      <img className='logo' src={Logo} alt="" />
      
       <div className="search">
       <input 
@@ -45,7 +46,7 @@ const hadleKeyPress = (e) => {
       placeholder="Pesquise por filmes"/>
       <img 
       onClick={() => searchMovies(search)}
-      src={"https://placehold.co/20x20"} 
+      src={Lupa} 
       alt="" />
       </div>
 
@@ -53,7 +54,7 @@ const hadleKeyPress = (e) => {
     {movies?.length > 0 ? (
       <div className="container">
     {movies.map((movie, index) => (
-      <MovieCard key={index} {...movie}/>
+      <MovieCard key={index} apiUrl={apiUrl} {...movie}/>
   ))}
   </div>
     ) :(
