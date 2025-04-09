@@ -1,0 +1,14 @@
+#chat-container {
+    width: 400px;
+    height: 600px;
+}
+
+.logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.escrita{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
